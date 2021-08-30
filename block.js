@@ -13,6 +13,10 @@ class block{
       current hash : ${this.cur_hash.substring(0,10)}
       data         : ${this.data}`;
   }
+
+  static genesis(){
+    return new this('Dummy time','Nolast','firsthash',[]);
+  }
 }
 
 //sharing block class as module
