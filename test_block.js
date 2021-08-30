@@ -2,7 +2,5 @@
 
 const block = require("./block");
 
-
-const obj_block = new block('some','old','new','checking');
-console.log(obj_block.toString());
-console.log(block.genesis().toString());   
+const fooBlock=block.mineBlock(block.genesis(),'foo');  
+console.log(fooBlock.toString());

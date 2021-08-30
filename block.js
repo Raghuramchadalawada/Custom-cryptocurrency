@@ -17,6 +17,14 @@ class block{
   static genesis(){
     return new this('Dummy time','Nolast','firsthash',[]);
   }
+
+  static mineBlock(lastBlock,data){
+    const timestamp = Date.now();
+    const lastHash = lastBlock.cur_hash;
+    const cur_hash = 'yet to complete';
+    
+    return new this(timestamp,lastHash,cur_hash,data);
+  }
 }
 
 //sharing block class as module
