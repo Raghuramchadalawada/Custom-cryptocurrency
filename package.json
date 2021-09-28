@@ -4,7 +4,7 @@
   "description": "Building  a custom crypto currency using block chain.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "test_block": "nodemon test_block"
   },
   "repository": {
