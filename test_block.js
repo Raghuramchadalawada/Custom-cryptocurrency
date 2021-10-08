@@ -1,6 +1,9 @@
 //for checking the exported block class
 
-const block = require("./block");
+const Blockchain  =require('./blockchain');
 
-const fooBlock=block.mineBlock(block.genesis(),'foo');  
-console.log(fooBlock.toString());
+const bc= new Blockchain();
+
+for(let i=0;i<10;i++){
+    console.log(bc.addBlock(`check ${i}`).toString());
+}

@@ -33,7 +33,7 @@ class block{
     do{ 
       nonce++;
       timestamp = Date.now()
-      difficulty = block.adjustDifficulty(lastBlock),timestamp;
+      difficulty = block.adjustDifficulty(lastBlock,timestamp);
       cur_hash = block.hash(timestamp,lastHash,data,nonce,difficulty);
     }while (cur_hash.substring(0,difficulty) !== '0'.repeat(difficulty));
     
@@ -46,7 +46,12 @@ class block{
   }
 
   static blockHash(block) {
-    const { timestamp, lastHash, data, nonce,difficulty} = block;
+    //const { timestamp, lastHash, data, nonce,difficulty} = block;
+    const timestamp=block.timestamp;
+    const lastHash= block.lastHash;
+    const data = block.data;
+    const nonce = block.nonce;
+    const difficulty = block.difficulty;
     return this.hash(timestamp, lastHash, data, nonce,difficulty);
   }
 
