@@ -13,7 +13,12 @@ class Blockchain{
     }
 
     isValidChain(chain) {
-        if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) return false;
+        if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) {
+          //console.log("Here");
+          //console.log(chain);
+          //console.log("Here")
+          //console.log(JSON.stringify(Block.genesis()));
+          return false;}
         for (let i=1; i<chain.length; i++) {
           const block = chain[i];
           const lastBlock = chain[i-1];
